@@ -41,6 +41,7 @@
         {
             if (number % 2 == 0)
             {
+                Console.WriteLine("Integer is even");
                 return true;
             }
             else
