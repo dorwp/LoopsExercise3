@@ -4,17 +4,50 @@
     {
         // LukeWarm Section: Implement the following methods        
         // 1. Write a method that prints all numbers from 1000 down to -1000 to the console.
-        //    - Method Signature: void PrintNumbers()
+        public static void PrintNumbers()
+        {
+            for (int i = 1000; i >= -1000; i--)
+            {
+                Console.WriteLine(i);
+            }
+        }
         
-        // 2. Write a method that prints every third number from 3 to 999 to the console.
-        //    - Method Signature: void PrintEveryThirdNumber()
+        // 2. Write a method that prints very third number from 3 to 999 to the console.
+        public static void PrintEveryThirdNumber()
+        {
+            for (int i = 3; i <= 999; i+=3)
+            {
+                Console.WriteLine(i);
+            }
+        }
         
         // 3. Write a method that accepts two integers as parameters and checks whether they are equal.
-        //    - Method Signature: bool AreNumbersEqual(int num1, int num2)
-        //    - Returns true if the numbers are equal, false otherwise.
+        public static bool AreNumbersEqual(int num1, int num2)
+        {
+            if (num1 == num2)
+            {
+                Console.WriteLine("Integers are equal");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Integers are not equal");
+                return false;
+            }
+        }
         
         // 4. Write a method that checks if a given number is even or odd.
-        //    - Method Signature: bool IsEven(int number)
+        public static bool IsEven(int number)
+        {
+            if (number % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         //    - Returns true if the number is even, false if odd.
         
         // 5. Write a method that checks if a given number is positive or negative.
@@ -39,7 +72,10 @@
         // Use various test cases to ensure they work as expected.        
         static void Main(string[] args)
         {
-            
+            PrintNumbers();
+            PrintEveryThirdNumber();
+            AreNumbersEqual(2, 2);
+            AreNumbersEqual(3, 1);
         }
     }
 }
