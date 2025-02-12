@@ -16,7 +16,7 @@
         public static void PrintEveryThirdNumber()
         {
             for (int i = 3; i <= 999; i+=3)
-            {
+            { 
                 Console.WriteLine(i);
             }
         }
