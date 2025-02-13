@@ -46,10 +46,10 @@
             }
             else
             {
+                Console.WriteLine("Integer is not even");
                 return false;
             }
         }
-        //    - Returns true if the number is even, false if odd.
         
         // 5. Write a method that checks if a given number is positive or negative.
         //    - Method Signature: bool IsPositive(int number)
@@ -77,6 +77,9 @@
             PrintEveryThirdNumber();
             AreNumbersEqual(2, 2);
             AreNumbersEqual(3, 1);
+            IsEven(3);
+            IsEven(50);
+            
         }
     }
 }
