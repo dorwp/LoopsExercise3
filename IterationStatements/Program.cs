@@ -52,11 +52,30 @@
         }
         
         // 5. Write a method that checks if a given number is positive or negative.
-        //    - Method Signature: bool IsPositive(int number)
-        //    - Returns true if the number is positive, false if negative.
-        
+        public static bool IsPositive(int number)
+        {
+            if (number > 0)
+            {
+                Console.WriteLine("Integer is positive");
+            }
+            else if (number < 0)
+            {
+                Console.WriteLine("Integer is negative");
+            }
+            else
+            {
+                Console.WriteLine("Integer is 0! NOT ");
+            }
+        }
         // 6. Write a method that reads the age of a candidate and determines if they are eligible to vote.
-        //    - Method Signature: bool CanVote(int age)
+        public static bool CanVote(int age)
+        {
+            Console.WriteLine("Please enter age: ");
+            
+            age = int.TryParse();
+            Console.WriteLine(age);
+            if (age < 18) return false;
+        }
         //    - Returns true if the candidate can vote, false otherwise.
         //    - Hint: Use `int.Parse()` or the safer `int.TryParse()` for extra practice in handling user input.
         
@@ -73,13 +92,14 @@
         // Use various test cases to ensure they work as expected.        
         static void Main(string[] args)
         {
-            PrintNumbers();
-            PrintEveryThirdNumber();
-            AreNumbersEqual(2, 2);
-            AreNumbersEqual(3, 1);
-            IsEven(3);
-            IsEven(50);
-            
+           // PrintNumbers();
+           // PrintEveryThirdNumber();
+           // AreNumbersEqual(2, 2);
+           // AreNumbersEqual(3, 1);
+           // IsEven(3);
+           // IsEven(50);
+           CanVote();
+
         }
     }
 }
