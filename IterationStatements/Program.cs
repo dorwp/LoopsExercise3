@@ -2,6 +2,10 @@
 {
     public class Program
     {
+        
+        
+        
+        
         // LukeWarm Section: Implement the following methods        
         // 1. Write a method that prints all numbers from 1000 down to -1000 to the console.
         public static void PrintNumbers()
@@ -57,27 +61,39 @@
             if (number > 0)
             {
                 Console.WriteLine("Integer is positive");
+                return true;
             }
             else if (number < 0)
             {
                 Console.WriteLine("Integer is negative");
+                return false;
             }
             else
             {
                 Console.WriteLine("Integer is 0! NOT ");
+                return false;
             }
         }
         // 6. Write a method that reads the age of a candidate and determines if they are eligible to vote.
-        public static bool CanVote(int age)
+        public static bool CanVote()
         {
             Console.WriteLine("Please enter age: ");
             
-            age = int.TryParse();
+            int age = Convert.ToInt32(Console.ReadLine());
+            //age = int.Parse(Console.ReadLine());
+            
             Console.WriteLine(age);
-            if (age < 18) return false;
+            if (age >= 18)
+            {
+                Console.WriteLine("You are eligible to vote");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("You are not eligible to vote");
+                return false;
+            }
         }
-        //    - Returns true if the candidate can vote, false otherwise.
-        //    - Hint: Use `int.Parse()` or the safer `int.TryParse()` for extra practice in handling user input.
         
         // Heatin' Up Section:
         // 1. Write a method that checks if an integer (provided by the user) is within the range of -10 to 10.
