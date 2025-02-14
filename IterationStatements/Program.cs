@@ -95,10 +95,26 @@
             }
         }
         
-        // Heatin' Up Section:
+        
+        
         // 1. Write a method that checks if an integer (provided by the user) is within the range of -10 to 10.
-        //    - Method Signature: bool IsInRange(int number)
-        //    - Returns true if the number is within the range, false otherwise.
+        public static bool IsInRange()
+        {
+            Console.WriteLine("Please enter a number: ");
+            
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int i = -10; i <= 10; i++)
+            {
+                if (num == i)
+                {
+                    Console.WriteLine($"The number {num} is in range");
+                    return true;
+                }
+            }
+            Console.WriteLine($"The number {num} is not in range");
+            return false;
+            
+        }
         
         // 2. Write a method that displays the multiplication table (from 1 to 12) for a given integer.
         //    - Method Signature: void DisplayMultiplicationTable(int number)
@@ -114,7 +130,8 @@
            // AreNumbersEqual(3, 1);
            // IsEven(3);
            // IsEven(50);
-           CanVote();
+           // CanVote();
+           IsInRange();
 
         }
     }
