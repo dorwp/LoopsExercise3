@@ -117,21 +117,28 @@
         }
         
         // 2. Write a method that displays the multiplication table (from 1 to 12) for a given integer.
-        //    - Method Signature: void DisplayMultiplicationTable(int number)
+        public static void DisplayMultiplicationTable(int number)
+        {
+            for (int i = 1; i <= 12; i++)
+                Console.WriteLine($"{i} * number = {number * i}");
+            
+        }
         //    - Should print each line in the format: "1 * number = result"
 
         // In the Main method below, call each of your methods to test them.
         // Use various test cases to ensure they work as expected.        
         static void Main(string[] args)
         {
-           // PrintNumbers();
-           // PrintEveryThirdNumber();
-           // AreNumbersEqual(2, 2);
-           // AreNumbersEqual(3, 1);
-           // IsEven(3);
-           // IsEven(50);
-           // CanVote();
+           PrintNumbers();
+           PrintEveryThirdNumber();
+           AreNumbersEqual(2, 2);
+           AreNumbersEqual(3, 1);
+           IsEven(3);
+           IsEven(50);
+           CanVote();
            IsInRange();
+           DisplayMultiplicationTable(2);
+           DisplayMultiplicationTable(24);
 
         }
     }
